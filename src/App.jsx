@@ -1,16 +1,9 @@
-import React from "react"
-import Signin from "./components/Signin"
-
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
- 
-
   return (
-    <>
-      <Signin/>
-       
-    </>
+   <AppRoutes/>
   )
 }
 
-export default App
+export default App;
