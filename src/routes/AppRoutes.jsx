@@ -12,10 +12,8 @@ function AppRoutes() {
       <Routes>
 
         <Route path="/" element={<SignIn />} />
-
         <Route path="/dashboard" element={<DashboardLayout />}>
-
-          <Route index element={<Overview />} />
+         <Route index element={<Overview />} />
 
           <Route path="wallets" element={<Wallets />} />
 
