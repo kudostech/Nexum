@@ -18,34 +18,31 @@ function Signin() {
       ...prevData,
       [name]: value,
     }));
+    
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (!formData.email) {
-      setErrorMessage("Email is not allowed to be empty");
+      setErrorMessage("Field is required");
       return;
     }
 
     if (!formData.password) {
-      setErrorMessage("Password is not allowed to be empty");
+      setErrorMessage("Field is required");
       return;
     }
-
-  navigate("/dashboard");
-
-    console.log("Form Submitted", formData);
-
+console.log("Form Submitted", formData);
+ 
+ navigate("/dashboard");
     setFormData({
       email: "",
       password: "",
     });
   };
-
-  const navigate = useNavigate();
-
-
+ 
+ const navigate = useNavigate();
 
   return (
     <div>
@@ -67,6 +64,7 @@ function Signin() {
             onChange={handleChange}
             value={formData.email}
           />
+         
 
           <h2 className="px-6 pt-6"> Password </h2>
           <input
@@ -77,11 +75,13 @@ function Signin() {
             onChange={handleChange}
             value={formData.password}
           />
+             {errorMessage && <p className="text-red-500 px-6">{errorMessage}</p>}
 
-          <p className=" flex justify-end lg:mx-5 m-4 "> Forget password ?</p>
+          <p className=" cursor-pointer flex justify-end lg:mx-5 m-4 "> Forget password ?</p>
+       
           <button
-           type="submit"
-            className=" text-white bg-blue-400 mt-6 py-4 justify-center w-90/100 mx-5 rounded-md"
+            type="submit"
+            className=" cursor-pointer text-white bg-blue-400 mt-6 py-4 justify-center w-90/100 mx-5 rounded-md"
           >
             {" "}
             Sign in{" "}
