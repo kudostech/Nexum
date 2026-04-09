@@ -1,22 +1,14 @@
-import React from 'react'
-import { Outlet } from 'react-router'
-
-import Navbar from '../components/Navbar'
+import React from "react";
+import Navbar from "../components/Navbar";
+import { Outlet } from "react-router-dom";
 
 function DashboardLayout() {
   return (
-    <div className=' flex min-h-screen bg-gray'>
-       <div className='flex-1'>
-        <Navbar />
-
-        <div className=' p-6'>
-
-            <Outlet />
-
-        </div>
-       </div> 
+    <div className="flex flex-col min-h-screen bg-gray-100 overflow-x-hidden">
+      <Navbar />
+ <Outlet />
     </div>
-  )
+  );
 }
 
 export default DashboardLayout;

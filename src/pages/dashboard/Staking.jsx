@@ -1,4 +1,4 @@
-function Wallets() {
+function Staking() {
   return (
     <div>
       <h1 className="text-2xl font-bold">
@@ -8,4 +8,4 @@ function Wallets() {
   );
 }
 
-export default Wallets;
+export default Staking;
