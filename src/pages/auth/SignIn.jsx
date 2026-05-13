@@ -16,11 +16,11 @@ function Signin() {
 
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: value, 
     }));
     
   };
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 

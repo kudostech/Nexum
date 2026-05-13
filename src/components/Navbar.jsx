@@ -24,7 +24,7 @@ function Navbar() {
 
       <div className=" flex gap-10">
         <Link to="/dashboard">
-          <span className=" flex gap-1 items-center text-blue-500">
+          <span className=" flex items-center text-blue-500">
             <FontAwesomeIcon icon={faGripVertical} />
             <h1 className=" font-extrabold"> Dashboard</h1>
           </span>

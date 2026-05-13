@@ -1,27 +1,21 @@
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react'
+import React from "react";
 
+import WalletOverview from "../../components/dashboard/WalletOverview";
+import Transactions from "../../components/dashboard/RecentTransactions";
+import Assets from "../../components/dashboard/Assets";
 
 function Dashboard() {
   return (
     <>
-      <div className='flex m-10 gap-4'>
+    
 
-        <div className=' bg-white rounded-2xl flex-1 h-100 '>
-<div className=' flex justify-between items-center font-bold p-4'>
-<h1>Nexum Platform</h1>
-<FontAwesomeIcon className='cursor-pointer' icon={faEllipsis} />
-</div>
-<hr className='text-gray-300' />
-      </div>
-
-      <div className='flex-1 bg-white'> 
-
-      </div>
+      <div className="px-22 mt-10 flex flex-col gap-6">
+        <WalletOverview />
+        <Assets />
+        <Transactions />
       </div>
     </>
-  )
+  );
 }
 
 export default Dashboard;
