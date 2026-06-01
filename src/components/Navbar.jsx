@@ -33,7 +33,7 @@ function Navbar() {
         <Link to="/dashboard/Transactions" >
           <div className=" flex items-center gap-1 ">
             <FontAwesomeIcon icon={faArrowRightArrowLeft} />
-            <h1 className=" "> Transactions</h1>
+            <h1> Transactions</h1>
           </div>
         </Link>
 
